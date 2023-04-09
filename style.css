@@ -48,7 +48,7 @@ body {
 }
 
 #card:hover::before {
-        transform: rotate(-30deg) translate(200px, 200px);
+        transform: rotate(-30deg) translate(320px, 300px);
 }
 
 
