@@ -1,5 +1,5 @@
 const url = "https://pokeapi.co/api/v2/pokemon/";
-const card = document.getElementById('card');
+const frontCard = document.getElementById('front-card');
 const btn = document.getElementById('btn');
 const typeColor = {
     bug: "#26de81",
@@ -20,7 +20,7 @@ const typeColor = {
 }
 
 let getPokeData = () => {
-    let id = Math.floor(Math.random()*750)+1;
+    let id = Math.floor(Math.random()*350)+1;
     const finalUrl = url + id;
     fetch(finalUrl)
         .then((response) => response.json())
@@ -40,7 +40,7 @@ let generateCard = (data) => {
 
 const themeColor = typeColor[data.types[0].type.name];
 console.log(themeColor);
-card.innerHTML = `
+frontCard.innerHTML = `
     <p class="hp">
         <span>HP</span>
         ${hp}
