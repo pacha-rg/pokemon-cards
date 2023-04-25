@@ -1,5 +1,5 @@
 const url = "https://pokeapi.co/api/v2/pokemon/";
-const frontCard = document.getElementById('front-card');
+const front = document.getElementById('front');
 const btn = document.getElementById('btn');
 const typeColor = {
     bug: "#26de81",
@@ -40,7 +40,7 @@ let generateCard = (data) => {
 
 const themeColor = typeColor[data.types[0].type.name];
 console.log(themeColor);
-frontCard.innerHTML = `
+front.innerHTML = `
     <p class="hp">
         <span>HP</span>
         ${hp}
@@ -78,8 +78,8 @@ styleCard(themeColor);
     }
 
     let styleCard = (color) => {
-        card.style.background = `radial-gradient(circle at 50% 0%, ${color} 26%, #ffffff 70%)`;
-        card.querySelectorAll(".types span").forEach((typeColor) => {
+        front.style.background = `radial-gradient(circle at 50% 0%, ${color} 26%, #ffffff 70%)`;
+        front.querySelectorAll(".types span").forEach((typeColor) => {
             typeColor.style.backgroundColor = color;
         })
     }
