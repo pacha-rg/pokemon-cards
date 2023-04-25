@@ -20,7 +20,7 @@ const typeColor = {
 }
 
 let getPokeData = () => {
-    let id = Math.floor(Math.random()*750)+1;
+    let id = Math.floor(Math.random()*550)+1;
     const finalUrl = url + id;
     fetch(finalUrl)
         .then((response) => response.json())

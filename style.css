@@ -31,6 +31,7 @@ body {
     max-height: 200px;
     position: relative;
     margin: 20px auto;
+    image-rendering: optimizeQuality;
 }
 
 #card::before {
